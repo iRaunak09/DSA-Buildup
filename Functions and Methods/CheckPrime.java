@@ -8,12 +8,11 @@ public class CheckPrime {
         boolean isPrime = true;
 
         if(n == 0 || n < 0 || n == 1){
-            isPrime = false;
+            return false;
         }else {
             for(int i = 2; i <= Math.sqrt(n); i++){
                 if(n % i == 0){
-                    isPrime = false;
-                    break;
+                    return false;
                 }
             }
         }
