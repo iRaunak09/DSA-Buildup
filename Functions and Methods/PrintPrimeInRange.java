@@ -20,15 +20,21 @@ public class PrintPrimeInRange {
     }
 
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter number: ");
-        int n = sc.nextInt();
-        
+    public static void printPrimeInRange(int n){
         for(int i = 2; i <= n; i++){
             if(checkPrime(i)){
                 System.out.println(i);
             }
         }
+    }
+
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int n = sc.nextInt();
+
+        printPrimeInRange(n);
+    
     }
 }
