@@ -1,0 +1,34 @@
+// package Functions and Methods;
+import java.util.Scanner;
+
+public class PrintPrimeInRange {
+
+    public static boolean checkPrime(int n){
+        boolean isPrime = true;
+
+        if(n == 0 || n < 0 || n == 1){
+            return false;
+        }else {
+            for(int i = 2; i <= Math.sqrt(n); i++){
+                if(n % i == 0){
+                    return false;
+                }
+            }
+        }
+
+        return isPrime;
+    }
+
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int n = sc.nextInt();
+        
+        for(int i = 2; i <= n; i++){
+            if(checkPrime(i)){
+                System.out.println(i);
+            }
+        }
+    }
+}
