@@ -6,30 +6,17 @@ public class DecToBin {
     public static int decToBin(int n){
         int temp = n;
         int rem;
-        int revBin = 0;
+        int bin = 0;
+        int counter = 0;
 
         while(temp > 0){
             rem = temp % 2;
-            revBin = revBin * 10 + rem;
+            bin = bin + rem * (int)Math.pow(10, counter);
             temp /= 2;
+            counter++;
         }
 
-        int bin = revNum(revBin);
         return bin;
-    }
-
-    public static int revNum(int n){
-        int temp = n;
-        int digit;
-        int reverse = 0;
-
-        while (temp != 0){
-            digit = temp % 10;
-            reverse = reverse * 10 + digit;
-            temp /= 10;
-        }
-
-        return reverse;
     }
 
     public static void main(String[] args) {
