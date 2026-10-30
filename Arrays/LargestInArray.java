@@ -1,7 +1,7 @@
 // package Arrays;
 
 public class LargestInArray {
-    
+
     public static int getLargest(int arr[]){
         int largest = Integer.MIN_VALUE;
 
