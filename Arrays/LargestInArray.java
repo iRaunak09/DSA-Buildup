@@ -5,6 +5,7 @@ public class LargestInArray {
     public static int getLargest(int arr[]){
         int largest = Integer.MIN_VALUE;
 
+        // Linear Search
         for(int i = 0; i < arr.length; i++){
             if(arr[i] > largest){
                 largest = arr[i];
@@ -20,3 +21,5 @@ public class LargestInArray {
         System.out.println(largest);
     }
 }
+
+// Time Complexity -> O(n)

@@ -26,3 +26,6 @@ public class BinarySearch {
         System.out.println(binarySearch(numbers, key));
     }
 }
+
+
+// Time Complexity -> O(log n)
