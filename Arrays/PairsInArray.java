@@ -1,3 +1,5 @@
+package Arrays;
+
 public class PairsInArray {
 
     public static void pairsInArray(int arr[]){
