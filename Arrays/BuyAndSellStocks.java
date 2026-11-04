@@ -3,14 +3,11 @@ public class BuyAndSellStocks {
     public static int buyAndSell(int prices[]){
         int maxProfit = 0;
         int buy = Integer.MAX_VALUE;
-        int sell = 0;
 
         for(int i = 0; i < prices.length; i++){
             if(prices[i] > buy){
-                int profit = prices[i] - buy;
-                if(profit > maxProfit){
-                    maxProfit = profit;
-                }
+                int profit = prices[i] - buy; //Today's profit
+                maxProfit = Math.max(maxProfit, profit);  //Global profit
             }else {
                 buy = prices[i];
             }
@@ -23,3 +20,5 @@ public class BuyAndSellStocks {
         System.out.println(buyAndSell(prices));
     }
 }
+
+// Time complexity -> O(n)
